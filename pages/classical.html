@@ -25,7 +25,7 @@
 
 <main class="wrapper">
   <h1>Classical Computer Vision Methods</h1>
-  <p class="audio-note">Voice-over: <code>assets/audio/classical.mp3</code></p>
+  <p class="audio-note">Voice-over: <code>../assets/audio/classical.mp3</code></p>
   <audio controls src="../assets/audio/classical.mp3"></audio>
   <hr/>
 
@@ -45,7 +45,8 @@ lines   = hough_transform(edges)
 pairs   = find_parallel_pairs(lines)
 score   = measure_periodicity_along(pairs)   // alternating bright/dark
 if score &gt; threshold:
-    report "Crosswalk"</code></pre>
+    report "Crosswalk"
+</code></pre>
 
   <figure style="margin-top:18px">
     <img src="../assets/images/edgedetection.webp"
