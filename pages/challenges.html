@@ -35,6 +35,15 @@
       <p>Markings differ (zebra, ladder, continental) and paint degrades over time, reducing contrast. Non-standard designs and resurfaced roads further confuse simple pattern rules
         <a class="cite" href="bibliography.html#ref-1" data-cite="Romić et al., 2021 — classical limitations">[1]</a>.
       </p>
+      <figure style="margin-top:10px">
+        <img src="../assets/images/3Ms_school_zone_safety_transformations.jpg"
+             alt="Left: faded crosswalk; Right: newly painted crosswalk"
+             style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+        <figcaption>
+          <strong>Appearance variability:</strong> faded markings (left) vs. fresh high-contrast paint (right).
+          Source: 3M School Zone Safety Transformations, 2023.
+        </figcaption>
+      </figure>
     </div>
 
     <div class="card">
@@ -42,6 +51,15 @@
       <p>Vehicles and crowds can partially cover stripes, hurting both edge-based methods and learned detectors
         <a class="cite" href="bibliography.html#ref-2" data-cite="Haider et al., 2025 — DL under occlusion">[2]</a>.
       </p>
+      <figure style="margin-top:10px">
+        <img src="../assets/images/jacek-dylag-PMxT0XtQ--A-unsplash.jpg"
+             alt="Crowd crossing a zebra crosswalk in strong backlight"
+             style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+        <figcaption>
+          Pedestrians occlude stripes and scene context. Photo:
+          <a href="https://unsplash.com/photos/PMxT0XtQ--A" target="_blank" rel="noopener">Jacek Dylag / Unsplash</a>.
+        </figcaption>
+      </figure>
     </div>
 
     <div class="card">
@@ -49,6 +67,15 @@
       <p>Harsh shadows, glare, rain/snow, and nighttime add noise and domain shift; low-light especially reduces stripe visibility
         <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — deployment metrics slice">[7]</a>.
       </p>
+      <figure style="margin-top:10px">
+        <img src="../assets/images/alex-durynin-KC739Be6Pqw-unsplash.jpg"
+             alt="Wet night street with headlights and low visibility"
+             style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+        <figcaption>
+          Night + rain: glare and reflections hide crosswalk texture. Photo:
+          <a href="https://unsplash.com/photos/KC739Be6Pqw" target="_blank" rel="noopener">Alex Durynin / Unsplash</a>.
+        </figcaption>
+      </figure>
     </div>
 
     <div class="card">
@@ -56,6 +83,15 @@
       <p>Onboard cameras view crosswalks at oblique angles and varying distances; perspective changes stripe geometry
         <a class="cite" href="bibliography.html#ref-2" data-cite="Haider et al., 2025 — augmentation & robustness">[2]</a>.
       </p>
+      <figure style="margin-top:10px">
+        <img src="../assets/images/tsuyoshi-kozu-IH3kVwdbisE-unsplash.jpg"
+             alt="Long city avenue with many crosswalks seen at an oblique angle"
+             style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+        <figcaption>
+          Oblique viewpoint and distance compress stripe spacing. Photo:
+          <a href="https://unsplash.com/photos/IH3kVwdbisE" target="_blank" rel="noopener">Tsuyoshi Kozu / Unsplash</a>.
+        </figcaption>
+      </figure>
     </div>
 
     <div class="card">
@@ -63,6 +99,15 @@
       <p>Models trained in one city/camera setup may not generalize to another due to markings, pavement color, or intrinsics
         <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — generalization concerns">[7]</a>.
       </p>
+      <figure style="margin-top:10px">
+        <img src="../assets/images/matthew-stephenson-jpcrHGEw8n4-unsplash.jpg"
+             alt="Aerial view of a diagonal multi-crosswalk intersection filled with pedestrians"
+             style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+        <figcaption>
+          Different cities use different crosswalk styles (e.g., diagonal scramble). Photo:
+          <a href="https://unsplash.com/photos/jpcrHGEw8n4" target="_blank" rel="noopener">Matthew Stephenson / Unsplash</a>.
+        </figcaption>
+      </figure>
     </div>
 
     <div class="card">
@@ -70,17 +115,17 @@
       <p>Detection alone doesn’t answer whether it’s <em>safe to cross</em>. Multimodal methods can reason about signals, traffic, and pedestrians
         <a class="cite" href="bibliography.html#ref-3" data-cite="Hwang et al., 2024 — safety reasoning with GPT-4V">[3]</a>.
       </p>
+      <figure style="margin-top:10px">
+        <img src="../assets/images/pieter-de-boer-p7PrcDHi0xA-unsplash.jpg"
+             alt="Pedestrian waiting near traffic signals at an intersection"
+             style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+        <figcaption>
+          Safety depends on context (signals, vehicles, pedestrians), not paint alone. Photo:
+          <a href="https://unsplash.com/photos/p7PrcDHi0xA" target="_blank" rel="noopener">Pieter de Boer / Unsplash</a>.
+        </figcaption>
+      </figure>
     </div>
   </div>
-
-  <figure style="margin-top:18px">
-    <img src="../assets/images/tcrosswalk0072.webp" 
-         alt="Faded or worn crosswalk markings on a street" 
-         style="width:100%; border-radius:12px; border:1px solid #1f2a44">
-    <figcaption>
-      Example of worn crosswalk paint, a frequent cause of detection errors. Source: project image.
-    </figcaption>
-  </figure>
 
   <div class="card" style="margin-top:18px">
     <strong>References on this page:</strong>

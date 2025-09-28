@@ -35,7 +35,7 @@
   </p>
 
   <p>
-    These approaches are lightweight and easy to explain, which is good for embedded devices. However, they are sensitive to worn paint, shadows, perspective changes, and occlusion. When contrast is low or the pattern is irregular, classical cues often fail—this is one reason why later work moved to learning-based methods
+    These approaches are lightweight and easy to explain—great for embedded devices. However, they are sensitive to worn paint, shadows, perspective changes, and occlusion. When contrast is low or the pattern is irregular, classical cues often fail, which is one reason later work moved to learning-based methods
     <a class="cite" href="bibliography.html#ref-1" data-cite="Romić et al., 2021 — classical limitations">[1]</a>.
   </p>
 
@@ -45,15 +45,15 @@ lines   = hough_transform(edges)
 pairs   = find_parallel_pairs(lines)
 score   = measure_periodicity_along(pairs)   // alternating bright/dark
 if score &gt; threshold:
-    report "Crosswalk"
-  </code></pre>
+    report "Crosswalk"</code></pre>
 
   <figure style="margin-top:18px">
     <img src="../assets/images/edgedetection.webp"
-         alt="Classical CV pipeline with edge detection and Hough transform"
+         alt="Classical vision pipeline: grayscale, edge detection, Hough transform for line extraction"
          style="width:100%; border-radius:12px; border:1px solid #1f2a44">
     <figcaption>
-      Classical CV pipeline: original image → grayscale → filtering → edge detection → Hough transform → line drafting. Source: project diagram.
+      Classical CV pipeline: original → grayscale/filtering → edge detection → Hough transform → line grouping for parallel stripes. 
+      Source: <a href="https://www.extrica.com/article/22023" target="_blank" rel="noopener">Extrica Article 22023</a>.
     </figcaption>
   </figure>
 
