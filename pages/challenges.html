@@ -25,7 +25,7 @@
 
 <main class="wrapper">
   <h1>Challenges in Crosswalk Detection</h1>
-  <p class="audio-note">Voice later: <code>assets/audio/challenges.mp3</code></p>
+  <p class="audio-note">Voice-over: <code>assets/audio/challenges.mp3</code></p>
   <audio controls src="../assets/audio/challenges.mp3"></audio>
   <hr/>
 
@@ -39,43 +39,47 @@
 
     <div class="card">
       <h3 style="margin-top:0">Occlusion</h3>
-      <p>Vehicles and crowds can partially cover stripes, hurting both edge-based methods and learned detectors. Robust evaluation should include partial/total occlusion scenarios
+      <p>Vehicles and crowds can partially cover stripes, hurting both edge-based methods and learned detectors
         <a class="cite" href="bibliography.html#ref-2" data-cite="Haider et al., 2025 — DL under occlusion">[2]</a>.
       </p>
     </div>
 
     <div class="card">
       <h3 style="margin-top:0">Illumination & Weather</h3>
-      <p>Harsh shadows, glare, rain/snow, and nighttime add noise and domain shift; low-light especially reduces stripe visibility. Report day/night and weather breakdowns
+      <p>Harsh shadows, glare, rain/snow, and nighttime add noise and domain shift; low-light especially reduces stripe visibility
         <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — deployment metrics slice">[7]</a>.
       </p>
     </div>
 
     <div class="card">
       <h3 style="margin-top:0">Viewpoint & Scale</h3>
-      <p>Onboard cameras view crosswalks at oblique angles and varying distances; perspective changes stripe geometry. Augmentations (perspective, blur) help but don’t remove the problem entirely
+      <p>Onboard cameras view crosswalks at oblique angles and varying distances; perspective changes stripe geometry
         <a class="cite" href="bibliography.html#ref-2" data-cite="Haider et al., 2025 — augmentation & robustness">[2]</a>.
       </p>
     </div>
 
     <div class="card">
       <h3 style="margin-top:0">Domain Shift</h3>
-      <p>Models trained in one city/camera setup may not generalize to another due to markings, pavement color, or intrinsics. Report performance by city and camera; consider adaptation strategies
+      <p>Models trained in one city/camera setup may not generalize to another due to markings, pavement color, or intrinsics
         <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — generalization concerns">[7]</a>.
       </p>
     </div>
 
     <div class="card">
       <h3 style="margin-top:0">Beyond “Finding Paint”</h3>
-      <p>Detection alone doesn’t answer whether it’s <em>safe to cross</em>. Multimodal methods can reason about signals, traffic, and pedestrians to explain decisions
+      <p>Detection alone doesn’t answer whether it’s <em>safe to cross</em>. Multimodal methods can reason about signals, traffic, and pedestrians
         <a class="cite" href="bibliography.html#ref-3" data-cite="Hwang et al., 2024 — safety reasoning with GPT-4V">[3]</a>.
       </p>
     </div>
   </div>
 
   <figure style="margin-top:18px">
-    <img src="../assets/images/crosswalk_placeholder1.png" alt="Challenging crosswalk conditions: shadows, occlusion, worn paint" style="width:100%; border-radius:12px; border:1px solid #1f2a44">
-    <figcaption>Common failure modes: low contrast (worn paint), occlusion, and shadows (replace with your own figure + citation).</figcaption>
+    <img src="../assets/images/tcrosswalk0072.webp" 
+         alt="Faded or worn crosswalk markings on a street" 
+         style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+    <figcaption>
+      Example of worn crosswalk paint, a frequent cause of detection errors. Source: project image.
+    </figcaption>
   </figure>
 
   <div class="card" style="margin-top:18px">

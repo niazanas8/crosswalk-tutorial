@@ -22,9 +22,10 @@
   <a href="bibliography.html">Annotated Bibliography</a>
 </nav>
 </header>
+
 <main class="wrapper">
   <h1>Datasets & Evaluation Metrics</h1>
-  <p class="audio-note">Voice later: <code>assets/audio/datasets.mp3</code></p>
+  <p class="audio-note">Voice-over: <code>assets/audio/datasets.mp3</code></p>
   <audio controls src="../assets/audio/datasets.mp3"></audio>
   <hr/>
 
@@ -45,17 +46,17 @@
       <tr>
         <td><strong>Cityscapes</strong></td>
         <td>Urban street scenes with pixel-level labels</td>
-        <td>High-quality segmentation ground truth for roads, sidewalks, people, etc.; useful for training/validating segmentation backbones.</td>
+        <td>High-quality segmentation ground truth for roads, sidewalks, people, vehicles, etc.; ideal for training/validating segmentation backbones.</td>
       </tr>
       <tr>
         <td><strong>KITTI</strong></td>
         <td>Driving scenes (detection, stereo, tracking)</td>
-        <td>Standard benchmarks for object detection/tracking; good for detector backbones and evaluation protocols.</td>
+        <td>Standard benchmarks for detector backbones and evaluation protocols.</td>
       </tr>
       <tr>
         <td><strong>Task-Specific Crosswalk Sets</strong></td>
         <td>Custom crops / masks from dashcams or maps</td>
-        <td>Many papers build small labeled sets of crosswalk patches or masks to fine-tune detectors/segmenters on the actual target task
+        <td>Many papers build small labeled sets of crosswalk patches or masks to fine-tune detectors/segmenters on the target task
           <a class="cite" href="bibliography.html#ref-1" data-cite="Romić et al., 2021 — task-specific labeling">[1]</a>
           <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — embedded study">[7]</a>.
         </td>
@@ -69,3 +70,48 @@
     <li><strong>Segmentation:</strong> <em>Intersection-over-Union (IoU)</em> / <em>mean IoU (mIoU)</em>, and pixel accuracy for crosswalk regions.</li>
     <li><strong>Operational:</strong> Frames per second (FPS) / <em>latency</em>, memory/power—important for embedded deployment (e.g., Jetson)
       <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — FPS/latency reporting">[7]</a>.
+    </li>
+    <li><strong>Robustness:</strong> Breakdowns by day/night, weather, occlusion level, and city/device to show generalization.</li>
+  </ul>
+
+  <!-- Figures: Cityscapes examples -->
+  <figure style="margin-top:18px">
+    <img src="../assets/images/OIP.jpeg"
+         alt="Cityscapes dataset segmentation example 1"
+         style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+    <figcaption>Cityscapes example with semantic labels (roads, sidewalks, people, vehicles). Source: Cityscapes dataset.</figcaption>
+  </figure>
+
+  <figure style="margin-top:18px">
+    <img src="../assets/images/OIP (1).jpeg"
+         alt="Cityscapes dataset segmentation example 2"
+         style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+    <figcaption>Another annotated Cityscapes scene, commonly used to pretrain/evaluate segmentation backbones. Source: Cityscapes dataset.</figcaption>
+  </figure>
+
+  <figure style="margin-top:18px">
+    <img src="../assets/images/OIP (2).jpeg"
+         alt="Cityscapes dataset segmentation example 3"
+         style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+    <figcaption>Intersection view with multiple labeled classes. Source: Cityscapes dataset.</figcaption>
+  </figure>
+
+  <figure style="margin-top:18px">
+    <img src="../assets/images/zuerich00.png"
+         alt="Cityscapes Zurich example with pixel-level segmentation"
+         style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+    <figcaption>Cityscapes example from Zurich, annotated with semantic segmentation. Source: Cityscapes dataset.</figcaption>
+  </figure>
+
+  <div class="card" style="margin-top:18px">
+    <strong>References on this page:</strong>
+    <a class="cite" href="bibliography.html#ref-1">[1]</a>
+    <a class="cite" href="bibliography.html#ref-7">[7]</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>
+</footer>
+</body>
+</html>

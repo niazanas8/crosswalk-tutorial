@@ -13,7 +13,7 @@
   <a href="../index.html">Home</a>
   <a href="introduction.html">Introduction</a>
   <a href="challenges.html">Challenges</a>
-  <a href="classical.html">Classical Methods</a>
+  <a href="classical.html" class="active">Classical Methods</a>
   <a href="deep-learning.html">Deep Learning</a>
   <a href="multimodal.html">VLM / Multimodal</a>
   <a href="datasets.html">Datasets & Metrics</a>
@@ -22,18 +22,21 @@
   <a href="bibliography.html">Annotated Bibliography</a>
 </nav>
 </header>
+
 <main class="wrapper">
   <h1>Classical Computer Vision Methods</h1>
-  <p class="audio-note">Voice later: <code>assets/audio/classical.mp3</code></p>
+  <p class="audio-note">Voice-over: <code>assets/audio/classical.mp3</code></p>
   <audio controls src="../assets/audio/classical.mp3"></audio>
   <hr/>
 
   <p>
-    Before deep learning became common, many crosswalk systems used simple but fast vision tools. A typical pipeline detected edges (e.g., Canny), fit straight lines with a Hough transform, and then searched for <em>parallel</em> line clusters and <em>repeated bright/dark bands</em> that match zebra patterns. Some papers also used <strong>row/column structure analysis</strong> to capture periodicity across the stripes <a href="bibliography.html#ref-1">[1]</a>.
+    Before deep learning became common, many crosswalk systems used simple but fast vision tools. A typical pipeline detected edges (e.g., Canny), fit straight lines with a Hough transform, and then searched for <em>parallel</em> line clusters and <em>repeated bright/dark bands</em> that match zebra patterns. Some papers also used <strong>row/column structure analysis</strong> to capture periodicity across the stripes
+    <a class="cite" href="bibliography.html#ref-1" data-cite="Romić et al., 2021 — row/column structure">[1]</a>.
   </p>
 
   <p>
-    These approaches are lightweight and easy to explain, which is good for embedded devices. However, they are sensitive to worn paint, shadows, perspective changes, and occlusion. When contrast is low or the pattern is irregular, classical cues often fail—this is one reason why later work moved to learning-based methods <a href="bibliography.html#ref-1">[1]</a>.
+    These approaches are lightweight and easy to explain, which is good for embedded devices. However, they are sensitive to worn paint, shadows, perspective changes, and occlusion. When contrast is low or the pattern is irregular, classical cues often fail—this is one reason why later work moved to learning-based methods
+    <a class="cite" href="bibliography.html#ref-1" data-cite="Romić et al., 2021 — classical limitations">[1]</a>.
   </p>
 
   <pre><code>// Pseudocode sketch of a classical pipeline
@@ -46,10 +49,20 @@ if score &gt; threshold:
   </code></pre>
 
   <figure style="margin-top:18px">
-    <img src="../assets/images/crosswalk_placeholder1.png" alt="Parallel lines and stripe periodicity illustration" style="width:100%; border-radius:12px; border:1px solid #1f2a44">
-    <figcaption>Classical methods look for edges, parallel lines, and repeated stripe patterns (replace with your own figure + citation).</figcaption>
+    <img src="../assets/images/edgedetection.webp"
+         alt="Classical CV pipeline with edge detection and Hough transform"
+         style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+    <figcaption>
+      Classical CV pipeline: original image → grayscale → filtering → edge detection → Hough transform → line drafting. Source: project diagram.
+    </figcaption>
   </figure>
+
+  <div class="card" style="margin-top:18px">
+    <strong>References on this page:</strong>
+    <a class="cite" href="bibliography.html#ref-1">[1]</a>
+  </div>
 </main>
+
 <footer>
   <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>
 </footer>
