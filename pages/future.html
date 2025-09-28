@@ -18,7 +18,7 @@
   <a href="multimodal.html">VLM / Multimodal</a>
   <a href="datasets.html">Datasets & Metrics</a>
   <a href="analysis.html">Comparative Analysis</a>
-  <a href="future.html">Future</a>
+  <a href="future.html" class="active">Future</a>
   <a href="bibliography.html">Annotated Bibliography</a>
 </nav>
 </header>
@@ -30,29 +30,42 @@
   <hr/>
 
   <p>
-    Research is moving from just detecting painted stripes to <em>understanding the whole crossing situation</em>. Newer systems combine fast detectors with reasoning components that consider traffic lights, vehicles, and pedestrians. Vision-language models (VLMs) are promising here because they can add context and explanations, though they must still meet real-time and reliability needs [3][5].
+    Research is moving from just detecting painted stripes to <em>understanding the whole crossing situation</em>. Newer systems combine fast detectors with reasoning components that consider traffic lights, vehicles, and pedestrians. Vision-language models (VLMs) are promising here because they can add context and explanations, though they must still meet real-time and reliability needs
+    <a class="cite" href="bibliography.html#ref-3" data-cite="Hwang et al., 2024 — safety reasoning">[3]</a>
+    <a class="cite" href="bibliography.html#ref-5" data-cite="Survey 2023/24 — VLM landscape">[5]</a>.
   </p>
 
   <div class="grid">
     <div class="card">
       <h3 style="margin-top:0">Multimodal Reasoning</h3>
-      <p>Fuse camera input with language prompts, maps, and signals (e.g., light state) to judge if it is <em>safe to cross</em>. Combine CNN/segmentation for geometry with a VLM for context and explanations [3][5].</p>
+      <p>Fuse camera input with language prompts, maps, and signals (e.g., light state) to judge if it is <em>safe to cross</em>. Combine CNN/segmentation for geometry with a VLM for context and explanations
+        <a class="cite" href="bibliography.html#ref-3" data-cite="Hwang et al., 2024 — explanations">[3]</a>
+        <a class="cite" href="bibliography.html#ref-5" data-cite="Survey — multimodal uses">[5]</a>.
+      </p>
     </div>
     <div class="card">
       <h3 style="margin-top:0">Night & Adverse Weather</h3>
-      <p>Improve robustness using domain adaptation, synthetic nighttime data, and low-light enhancement. Report results broken down by time of day and weather [7].</p>
+      <p>Improve robustness using domain adaptation, synthetic nighttime data, and low-light enhancement. Report results broken down by time of day and weather
+        <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — deployment metrics">[7]</a>.
+      </p>
     </div>
     <div class="card">
       <h3 style="margin-top:0">Efficiency & Deployment</h3>
-      <p>Distill or quantize models for embedded devices (e.g., Jetson). Evaluate <strong>accuracy + FPS/latency</strong> together for practical trade-offs [7].</p>
+      <p>Distill or quantize models for embedded devices (e.g., Jetson). Evaluate <strong>accuracy + FPS/latency</strong> together for practical trade-offs
+        <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — FPS/latency">[7]</a>.
+      </p>
     </div>
     <div class="card">
       <h3 style="margin-top:0">Human-Centered Design</h3>
-      <p>Design feedback that helps people: clear audio/tactile cues for blind or low-vision users; concise on-screen explanations for drivers or operators [3].</p>
+      <p>Design feedback that helps people: clear audio/tactile cues for blind or low-vision users; concise on-screen explanations for drivers or operators
+        <a class="cite" href="bibliography.html#ref-3" data-cite="Hwang et al., 2024 — accessible explanations">[3]</a>.
+      </p>
     </div>
     <div class="card">
       <h3 style="margin-top:0">Data & Benchmarking</h3>
-      <p>Create open crosswalk benchmarks with diverse cities and conditions. Include annotations for context (signals, occupancy) to support reasoning research [5].</p>
+      <p>Create open crosswalk benchmarks with diverse cities and conditions. Include annotations for context (signals, occupancy) to support reasoning research
+        <a class="cite" href="bibliography.html#ref-5" data-cite="Survey — datasets & gaps">[5]</a>.
+      </p>
     </div>
   </div>
 
@@ -67,6 +80,13 @@
     <img src="../assets/images/crosswalk_placeholder2.png" alt="From detection to scene understanding" style="width:100%; border-radius:12px; border:1px solid #1f2a44">
     <figcaption>Future systems: combine fast geometric detectors with multimodal reasoning and clear user feedback (replace with your own figure + citation).</figcaption>
   </figure>
+
+  <div class="card" style="margin-top:18px">
+    <strong>References on this page:</strong>
+    <a class="cite" href="bibliography.html#ref-3">[3]</a>
+    <a class="cite" href="bibliography.html#ref-5">[5]</a>
+    <a class="cite" href="bibliography.html#ref-7">[7]</a>
+  </div>
 </main>
 
 <footer>

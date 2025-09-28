@@ -10,17 +10,17 @@
 <body>
 <header>
   <nav class="nav wrapper">
-  <a href="../index.html">Home</a>
-  <a href="introduction.html">Introduction</a>
-  <a href="challenges.html">Challenges</a>
-  <a href="classical.html">Classical Methods</a>
-  <a href="deep-learning.html">Deep Learning</a>
-  <a href="multimodal.html">VLM / Multimodal</a>
-  <a href="datasets.html">Datasets & Metrics</a>
-  <a href="analysis.html">Comparative Analysis</a>
-  <a href="future.html">Future</a>
-  <a href="bibliography.html">Annotated Bibliography</a>
-</nav>
+    <a href="../index.html">Home</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="challenges.html">Challenges</a>
+    <a href="classical.html">Classical Methods</a>
+    <a href="deep-learning.html">Deep Learning</a>
+    <a href="multimodal.html">VLM / Multimodal</a>
+    <a href="datasets.html">Datasets & Metrics</a>
+    <a href="analysis.html" class="active">Comparative Analysis</a>
+    <a href="future.html">Future</a>
+    <a href="bibliography.html">Annotated Bibliography</a>
+  </nav>
 </header>
 
 <main class="wrapper">
@@ -39,7 +39,9 @@
       <ul>
         <li><strong>Strengths:</strong> fast, simple, interpretable; runs on limited hardware.</li>
         <li><strong>Works best:</strong> clean paint, good contrast, daylight.</li>
-        <li><strong>Weaknesses:</strong> fails under wear, shadows, occlusion, or unusual designs <a href="bibliography.html#ref-1">[1]</a>.</li>
+        <li><strong>Weaknesses:</strong> fails under wear, shadows, occlusion, or unusual designs
+          <a class="cite" href="bibliography.html#ref-1" data-cite="Romić et al., 2021 — classical weaknesses">[1]</a>.
+        </li>
       </ul>
     </div>
 
@@ -48,7 +50,10 @@
       <ul>
         <li><strong>Strengths:</strong> better tolerance to viewpoint changes and partial occlusion.</li>
         <li><strong>Works best:</strong> when trained with diverse data; clear daytime scenes.</li>
-        <li><strong>Weaknesses:</strong> domain shift (new cities/night), compute for real-time; needs careful evaluation of FPS/latency <a href="bibliography.html#ref-2">[2]</a><a href="bibliography.html#ref-7">[7]</a>.</li>
+        <li><strong>Weaknesses:</strong> domain shift (new cities/night), compute for real-time; needs careful evaluation of FPS/latency
+          <a class="cite" href="bibliography.html#ref-2" data-cite="Haider et al., 2025 — DL pipeline">[2]</a>
+          <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — embedded performance">[7]</a>.
+        </li>
       </ul>
     </div>
 
@@ -57,7 +62,10 @@
       <ul>
         <li><strong>Strengths:</strong> adds scene context and explanations (e.g., is it safe to cross?).</li>
         <li><strong>Works best:</strong> as a complement to fast detectors—reasoning about tricky cases.</li>
-        <li><strong>Weaknesses:</strong> latency/compute, reliability of explanations, sensitivity to prompts <a href="bibliography.html#ref-3">[3]</a><a href="bibliography.html#ref-5">[5]</a>.</li>
+        <li><strong>Weaknesses:</strong> latency/compute, reliability of explanations, sensitivity to prompts
+          <a class="cite" href="bibliography.html#ref-3" data-cite="Hwang et al., 2024 — explanations">[3]</a>
+          <a class="cite" href="bibliography.html#ref-5" data-cite="Survey 2023/24 — VLM challenges">[5]</a>.
+        </li>
       </ul>
     </div>
   </div>
@@ -65,8 +73,12 @@
   <h2 style="margin-top:22px">Key Takeaways</h2>
   <ul>
     <li><strong>No single method wins everywhere.</strong> Clean scenes favor classical methods; complex scenes need CNNs; edge cases may benefit from VLM reasoning.</li>
-    <li><strong>Data matters.</strong> Diversity across cities, weather, and lighting improves robustness (but domain shift remains a challenge) <a href="bibliography.html#ref-7">[7]</a>.</li>
-    <li><strong>Deployment = accuracy + speed.</strong> Report mAP/mIoU <em>and</em> FPS/latency; embedded use often requires compression/distillation <a href="bibliography.html#ref-7">[7]</a>.</li>
+    <li><strong>Data matters.</strong> Diversity across cities, weather, and lighting improves robustness (but domain shift remains a challenge)
+      <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — generalization & deployment">[7]</a>.
+    </li>
+    <li><strong>Deployment = accuracy + speed.</strong> Report mAP/mIoU <em>and</em> FPS/latency; embedded use often requires compression/distillation
+      <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — reporting guidance">[7]</a>.
+    </li>
   </ul>
 
   <hr style="margin:26px 0">
@@ -103,7 +115,16 @@
   </div>
   <script src="../assets/js/quiz.js"></script>
 
+  <div class="card" style="margin-top:18px">
+    <strong>References on this page:</strong>
+    <a class="cite" href="bibliography.html#ref-1">[1]</a>
+    <a class="cite" href="bibliography.html#ref-2">[2]</a>
+    <a class="cite" href="bibliography.html#ref-3">[3]</a>
+    <a class="cite" href="bibliography.html#ref-5">[5]</a>
+    <a class="cite" href="bibliography.html#ref-7">[7]</a>
+  </div>
 </main>
+
 <footer>
   <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>
 </footer>

@@ -9,62 +9,84 @@
 </head>
 <body>
 <header>
-    <nav class="nav wrapper">
-      <a href="index.html">Home</a>
-      <a href="pages/introduction.html">Introduction</a>
-      <a href="pages/challenges.html">Challenges</a>
-      <a href="pages/classical.html">Classical Methods</a>
-      <a href="pages/deep-learning.html">Deep Learning</a>
-      <a href="pages/multimodal.html">VLM / Multimodal</a>
-      <a href="pages/datasets.html">Datasets & Metrics</a>
-      <a href="pages/analysis.html">Comparative Analysis</a>
-      <a href="pages/future.html">Future</a>
-      <a href="pages/bibliography.html">Annotated Bibliography</a>
-    </nav>
-    </header>
+  <nav class="nav wrapper">
+    <a href="index.html" class="active">Home</a>
+    <a href="pages/introduction.html">Introduction</a>
+    <a href="pages/challenges.html">Challenges</a>
+    <a href="pages/classical.html">Classical Methods</a>
+    <a href="pages/deep-learning.html">Deep Learning</a>
+    <a href="pages/multimodal.html">VLM / Multimodal</a>
+    <a href="pages/datasets.html">Datasets & Metrics</a>
+    <a href="pages/analysis.html">Comparative Analysis</a>
+    <a href="pages/future.html">Future</a>
+    <a href="pages/bibliography.html">Annotated Bibliography</a>
+  </nav>
+</header>
+
 <section class="hero">
   <div class="wrapper" style="padding:28px 0 22px">
     <h1>Crosswalk Detection: A Research Tutorial</h1>
-    <p class="audio-note">Add your short voice-over here: <code>assets/audio/intro.mp3</code></p>
+    <p class="audio-note">Voice-over: <code>assets/audio/intro.mp3</code></p>
+    <audio controls src="assets/audio/intro.mp3"></audio>
   </div>
 </section>
+
 <main class="wrapper">
-
-<div class="grid">
-  <div class="card">
-    <h2>Goal</h2>
-    <p>This research tutorial surveys methods for <strong>crosswalk detection</strong> in urban scenes, from classical computer vision to modern deep learning and <em>vision-language / multimodal</em> models. It synthesizes findings across papers, highlights <em>where methods work</em>, <em>where they fail</em>, and <em>open problems</em>.</p>
+  <div class="grid">
+    <div class="card">
+      <h2>Goal</h2>
+      <p>
+        This tutorial surveys methods for <strong>crosswalk detection</strong> in urban scenes, from classical
+        computer vision to modern deep learning and <em>vision–language / multimodal</em> models. It synthesizes
+        findings across papers, highlighting <em>where methods work</em>, <em>where they fail</em>, and
+        <em>open problems</em>
+        <a class="cite" href="pages/bibliography.html#ref-1" data-cite="Romić et al., 2021 — classical baseline">[1]</a>
+        <a class="cite" href="pages/bibliography.html#ref-2" data-cite="Haider et al., 2025 — DL pipeline">[2]</a>
+        <a class="cite" href="pages/bibliography.html#ref-3" data-cite="Hwang et al., 2024 — GPT-4V safety reasoning">[3]</a>.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Read Time</h2>
+      <p>~15–30 minutes • includes ≥5 figures, audio narration on each page, and a short quiz.</p>
+    </div>
+    <div class="card">
+      <h2>How to Navigate</h2>
+      <p>
+        Use the top navigation bar to jump between sections. The <strong>Annotated Bibliography</strong> contains
+        numbered references. Inline citations like
+        <a class="cite" href="pages/bibliography.html#ref-1">[1]</a>
+        link to details.
+      </p>
+    </div>
   </div>
-  <div class="card">
-    <h2>Read Time</h2>
-    <p>~15–30 minutes • includes 5+ figures, audio narration on each page, and a short quiz.</p>
-  </div>
-  <div class="card">
-    <h2>How to Navigate</h2>
-    <p>Use the top navigation bar to jump between sections. The <strong>Annotated Bibliography</strong> contains numbered references. Inline citations like <a href="pages/bibliography.html#ref-1">[1]</a> link to details.</p>
-  </div>
-</div>
 
-<h2>Table of Contents</h2>
-<div class="grid">
-  <div class="card toc">
-    <a href="pages/introduction.html">1. Introduction & Motivation</a>
-    <a href="pages/challenges.html">2. Challenges in Crosswalk Detection</a>
-    <a href="pages/classical.html">3. Classical Computer Vision Methods</a>
-    <a href="pages/deep-learning.html">4. Deep Learning Approaches</a>
-    <a href="pages/multimodal.html">5. VLM / Multimodal Methods</a>
-    <a href="pages/datasets.html">6. Datasets & Metrics</a>
-    <a href="pages/analysis.html">7. Comparative Analysis & Quiz</a>
-    <a href="pages/future.html">8. Future Directions & Applications</a>
-    <a href="pages/bibliography.html">9. Annotated Bibliography</a>
+  <h2>Table of Contents</h2>
+  <div class="grid">
+    <div class="card toc">
+      <a href="pages/introduction.html">1. Introduction & Motivation</a>
+      <a href="pages/challenges.html">2. Challenges in Crosswalk Detection</a>
+      <a href="pages/classical.html">3. Classical Computer Vision Methods</a>
+      <a href="pages/deep-learning.html">4. Deep Learning Approaches</a>
+      <a href="pages/multimodal.html">5. VLM / Multimodal Methods</a>
+      <a href="pages/datasets.html">6. Datasets & Metrics</a>
+      <a href="pages/analysis.html">7. Comparative Analysis & Quiz</a>
+      <a href="pages/future.html">8. Future Directions & Applications</a>
+      <a href="pages/bibliography.html">9. Annotated Bibliography</a>
+    </div>
   </div>
-</div>
 
-<div class="notice" style="margin-top:18px">
-  <strong>Note:</strong> This is a <em>survey-style tutorial</em>. All results and examples summarize prior research (properly cited) rather than original implementations.
-</div>
+  <div class="notice" style="margin-top:18px">
+    <strong>Note:</strong> This is a <em>survey-style tutorial</em>. All results and examples summarize prior research (properly cited) rather than new implementations.
+  </div>
 
+  <div class="card" style="margin-top:18px">
+    <strong>References on this page:</strong>
+    <a class="cite" href="pages/bibliography.html#ref-1">[1]</a>
+    <a class="cite" href="pages/bibliography.html#ref-2">[2]</a>
+    <a class="cite" href="pages/bibliography.html#ref-3">[3]</a>
+  </div>
 </main>
+
 <footer>
   <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>
 </footer>

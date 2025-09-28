@@ -15,13 +15,14 @@
   <a href="challenges.html">Challenges</a>
   <a href="classical.html">Classical Methods</a>
   <a href="deep-learning.html">Deep Learning</a>
-  <a href="multimodal.html">VLM / Multimodal</a>
+  <a href="multimodal.html" class="active">VLM / Multimodal</a>
   <a href="datasets.html">Datasets & Metrics</a>
   <a href="analysis.html">Comparative Analysis</a>
   <a href="future.html">Future</a>
   <a href="bibliography.html">Annotated Bibliography</a>
 </nav>
 </header>
+
 <main class="wrapper">
   <h1>Vision-Language & Multimodal Models</h1>
   <p class="audio-note">Voice later: <code>assets/audio/multimodal.mp3</code></p>
@@ -29,11 +30,14 @@
   <hr/>
 
   <p>
-    Newer research looks beyond recognizing paint on the road and tries to <em>understand the whole scene</em>. <strong>Vision-language models (VLMs)</strong> combine visual features with language prompts so they can describe context, explain decisions, and even rate whether it looks safe to cross. For example, a recent study used a large multimodal model (GPT-4V) to predict a street-crossing safety score and give a short explanation for the decision <a href="bibliography.html#ref-3">[3]</a>.
+    Newer research looks beyond recognizing paint on the road and tries to <em>understand the whole scene</em>. <strong>Vision-language models (VLMs)</strong> combine visual features with language prompts so they can describe context, explain decisions, and even rate whether it looks safe to cross. For example, a recent study used a large multimodal model (GPT-4V) to predict a street-crossing safety score and give a short explanation for the decision
+    <a class="cite" href="bibliography.html#ref-3" data-cite="Hwang et al., 2024 — GPT-4V safety assessment">[3]</a>.
   </p>
 
   <p>
-    VLMs can also help traditional perception by providing <em>semantic context</em>. In pedestrian detection, a CVPR’23 method (VLPD) uses vision-language supervision to learn contextual cues (e.g., sidewalks, vehicles) without extra manual labels, improving results under occlusion and crowded scenes <a href="bibliography.html#ref-4">[4]</a>. Surveys of VLMs in autonomous driving summarize broader applications across perception, planning, and decision-making, and also point out open issues like latency, reliability, and domain shift <a href="bibliography.html#ref-5">[5]</a>.
+    VLMs can also help traditional perception by providing <em>semantic context</em>. In pedestrian detection, a CVPR’23 method (VLPD) uses vision-language supervision to learn contextual cues (e.g., sidewalks, vehicles) without extra manual labels, improving results under occlusion and crowded scenes
+    <a class="cite" href="bibliography.html#ref-4" data-cite="Liu et al., 2023 (CVPR) — VLPD context">[4]</a>. Surveys of VLMs in autonomous driving summarize broader applications across perception, planning, and decision-making, and also point out open issues like latency, reliability, and domain shift
+    <a class="cite" href="bibliography.html#ref-5" data-cite="Survey 2023/24 — VLMs in autonomous driving">[5]</a>.
   </p>
 
   <div class="grid" style="margin-top:8px">
@@ -61,9 +65,19 @@
   </figure>
 
   <p style="margin-top:18px">
-    Takeaway: multimodal models don’t replace classical or CNN-based detectors; they add <em>contextual reasoning</em> on top. A practical system may combine fast detectors with a VLM that explains or double-checks safety in harder scenes <a href="bibliography.html#ref-3">[3]</a><a href="bibliography.html#ref-5">[5]</a>.
+    Takeaway: multimodal models don’t replace classical or CNN-based detectors; they add <em>contextual reasoning</em> on top. A practical system may combine fast detectors with a VLM that explains or double-checks safety in harder scenes
+    <a class="cite" href="bibliography.html#ref-3" data-cite="Hwang et al., 2024 — explanations">[3]</a>
+    <a class="cite" href="bibliography.html#ref-5" data-cite="Survey 2023/24 — VLM challenges">[5]</a>.
   </p>
+
+  <div class="card" style="margin-top:18px">
+    <strong>References on this page:</strong>
+    <a class="cite" href="bibliography.html#ref-3">[3]</a>
+    <a class="cite" href="bibliography.html#ref-4">[4]</a>
+    <a class="cite" href="bibliography.html#ref-5">[5]</a>
+  </div>
 </main>
+
 <footer>
   <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>
 </footer>

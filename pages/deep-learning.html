@@ -14,7 +14,7 @@
   <a href="introduction.html">Introduction</a>
   <a href="challenges.html">Challenges</a>
   <a href="classical.html">Classical Methods</a>
-  <a href="deep-learning.html">Deep Learning</a>
+  <a href="deep-learning.html" class="active">Deep Learning</a>
   <a href="multimodal.html">VLM / Multimodal</a>
   <a href="datasets.html">Datasets & Metrics</a>
   <a href="analysis.html">Comparative Analysis</a>
@@ -22,6 +22,7 @@
   <a href="bibliography.html">Annotated Bibliography</a>
 </nav>
 </header>
+
 <main class="wrapper">
   <h1>Deep Learning Approaches</h1>
   <p class="audio-note">Voice later: <code>assets/audio/deep-learning.mp3</code></p>
@@ -29,11 +30,14 @@
   <hr/>
 
   <p>
-    Deep learning improved crosswalk detection by learning features directly from data instead of hand-crafting rules. A common setup trains <strong>object detectors</strong> (e.g., Faster R-CNN, YOLO) to localize crosswalk regions, or uses <strong>semantic segmentation</strong> networks (e.g., U-Net, DeepLab) to label pixels that belong to the crosswalk pattern. These models handle wear, mild occlusion, and viewpoint changes better than classical methods <a href="bibliography.html#ref-2">[2]</a><a href="bibliography.html#ref-7">[7]</a>.
+    Deep learning improved crosswalk detection by learning features directly from data instead of hand-crafting rules. A common setup trains <strong>object detectors</strong> (e.g., Faster R-CNN, YOLO) to localize crosswalk regions, or uses <strong>semantic segmentation</strong> networks (e.g., U-Net, DeepLab) to label pixels that belong to the crosswalk pattern. These models handle wear, mild occlusion, and viewpoint changes better than classical methods
+    <a class="cite" href="bibliography.html#ref-2" data-cite="Haider et al., 2025 — deep learning pipeline">[2]</a>
+    <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — YOLOv5 on Jetson, FPS/latency">[7]</a>.
   </p>
 
   <p>
-    However, performance still depends on the diversity of the training data. Night scenes, heavy shadows, and new cities can cause drops due to <em>domain shift</em>. For deployment, researchers also report practical metrics such as <strong>FPS/latency</strong> and power, and explore model compression or edge-friendly variants for real-time use on devices like Jetson <a href="bibliography.html#ref-7">[7]</a>.
+    However, performance still depends on the diversity of the training data. Night scenes, heavy shadows, and new cities can cause drops due to <em>domain shift</em>. For deployment, researchers also report practical metrics such as <strong>FPS/latency</strong> and power, and explore model compression or edge-friendly variants for real-time use on devices like Jetson
+    <a class="cite" href="bibliography.html#ref-7" data-cite="Yang et al., 2022 — embedded deployment trade-offs">[7]</a>.
   </p>
 
   <figure style="margin-top:18px">
@@ -50,7 +54,14 @@
       <li>Robustness: augmentations for lighting, weather, and perspective.</li>
     </ul>
   </div>
+
+  <div class="card" style="margin-top:18px">
+    <strong>References on this page:</strong>
+    <a class="cite" href="bibliography.html#ref-2">[2]</a>
+    <a class="cite" href="bibliography.html#ref-7">[7]</a>
+  </div>
 </main>
+
 <footer>
   <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>
 </footer>

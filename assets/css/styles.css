@@ -1,35 +1,143 @@
+/* === Crosswalk Tutorial • Modern Stylesheet (drop-in replacement) === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+/* Palettes */
 :root{
-  --bg:#0b1220; --panel:#121a2b; --text:#e6eefb; --muted:#9fb3d9; --accent:#7aa2ff; --accent2:#3dd2c3;
+  --bg:#0b1220; --panel:#121a2b; --text:#e6eefb; --muted:#9fb3d9;
+  --accent:#7aa2ff; --accent2:#3dd2c3; --border:#1f2a44;
+  --chip:#122345; --chipText:#bcd3ff; --ring:#2a7fff33;
 }
+[data-theme="light"]{
+  --bg:#f7f9fc; --panel:#ffffff; --text:#0f172a; --muted:#5b6b88;
+  --accent:#2a66ff; --accent2:#10bfa7; --border:#e6eaf3;
+  --chip:#e9f0ff; --chipText:#21407a; --ring:#2a66ff22;
+}
+
+/* Resets / base */
 *{box-sizing:border-box}
-body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; background:var(--bg); color:var(--text); line-height:1.6;}
-a{color:var(--accent)}
-header{position:sticky; top:0; background:rgba(18,26,43,.85); backdrop-filter: blur(6px); border-bottom:1px solid #1f2a44; z-index:10}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+  background:
+    radial-gradient(1000px 340px at 20% -10%, color-mix(in hsl, var(--accent) 28%, transparent), transparent),
+    radial-gradient(1000px 360px at 85% -10%, color-mix(in hsl, var(--accent2) 28%, transparent), transparent),
+    var(--bg);
+  color:var(--text); line-height:1.6;
+}
+a{color:var(--accent); text-underline-offset:3px}
+a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:8px}
 .wrapper{max-width:1100px; margin:0 auto; padding:0 16px}
-.nav{display:flex; gap:16px; align-items:center; padding:12px 0; flex-wrap:wrap}
-.nav a{padding:8px 12px; border-radius:12px; text-decoration:none; color:var(--text)}
-.nav a.active, .nav a:hover{background:#1a2440}
-main{padding:28px 0 52px}
+
+/* Header / Nav */
+header{
+  position:sticky; top:0; z-index:20;
+  background:color-mix(in hsl, var(--bg) 82%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border)
+}
+.nav{display:flex; gap:12px; align-items:center; padding:10px 0; flex-wrap:wrap}
+.nav a{
+  position:relative; padding:8px 12px; border-radius:12px; text-decoration:none; color:var(--text)
+}
+.nav a::after{
+  content:""; position:absolute; left:12px; right:12px; bottom:4px; height:2px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  opacity:0; transform:scaleX(.6); transition:.22s ease
+}
+.nav a:hover::after, .nav a.active::after{opacity:1; transform:scaleX(1)}
+.nav .spacer{flex:1 1 auto}
+
+/* Buttons */
+.btn,.btn-icon{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:10px 14px; border-radius:12px; border:1px solid color-mix(in hsl, var(--border) 80%, transparent);
+  background:color-mix(in hsl, var(--panel) 92%, #000 6%); color:var(--text); cursor:pointer; transition:box-shadow .2s ease
+}
+.btn:hover,.btn-icon:hover{box-shadow:0 0 0 2px var(--ring)}
+.btn-icon{width:38px; height:38px; padding:0}
+
+/* Page layout */
+main{padding:28px 0 56px}
 h1,h2,h3{line-height:1.2}
-.hero{background: radial-gradient(1200px 400px at 30% -10%, rgba(122,162,255,.25), transparent), radial-gradient(1200px 400px at 80% -10%, rgba(61,210,195,.18), transparent); border-bottom:1px solid #1f2a44}
-.card{background:var(--panel); border:1px solid #1f2a44; border-radius:16px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.35);}
+h1{font-size:clamp(1.6rem,1.1rem + 1.6vw,2.2rem)}
+h2{font-size:clamp(1.25rem,1rem + .8vw,1.6rem)}
+h3{font-size:clamp(1.05rem,.95rem + .5vw,1.2rem)}
+.hero{
+  background:
+    radial-gradient(1200px 400px at 30% -10%, color-mix(in hsl, var(--accent) 28%, transparent), transparent),
+    radial-gradient(1200px 400px at 80% -10%, color-mix(in hsl, var(--accent2) 28%, transparent), transparent);
+  border-bottom:1px solid var(--border)
+}
+
+/* Cards & grids */
+.card{
+  background:var(--panel); border:1px solid var(--border);
+  border-radius:16px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
 .grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+
+/* Text bits */
 blockquote{border-left:4px solid var(--accent2); padding-left:12px; color:var(--muted)}
+.audio-note{font-size:.9rem; color:var(--muted)}
+hr{border:0; border-top:1px solid color-mix(in hsl, var(--border) 92%, #000 8%); margin:24px 0}
+
+/* Media */
 figure{margin:0; padding:0}
 figcaption{font-size:.9rem; color:var(--muted); margin-top:6px}
-kbd{background:#1f2a44; border:1px solid #2b3a62; padding:2px 6px; border-radius:6px}
-footer{border-top:1px solid #1f2a44; color:var(--muted); padding:24px 0; font-size:.9rem}
-.table{width:100%; border-collapse:collapse; border:1px solid #203055; border-radius:12px; overflow:hidden}
-.table th,.table td{border-bottom:1px solid #203055; padding:10px 12px; text-align:left}
-.badge{display:inline-block; padding:4px 8px; border:1px solid #2a3b68; border-radius:999px; color:#bcd; font-size:.85rem}
+audio{width:100%; margin:6px 0 12px}
+
+/* Tables (responsive) */
+.table-wrap{overflow:auto; border:1px solid var(--border); border-radius:12px}
+.table{width:100%; border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid var(--border); padding:10px 12px; text-align:left}
+.table th{background:color-mix(in hsl, var(--panel) 88%, #000 8%)}
+
+/* Code blocks */
+code{background:color-mix(in hsl, var(--panel) 88%, #000 8%); border:1px solid var(--border); padding:2px 6px; border-radius:6px}
+pre{background:color-mix(in hsl, var(--panel) 92%, #000 8%); border:1px solid var(--border); padding:12px; border-radius:12px; overflow:auto}
+
+/* Quiz */
+.quiz{background:color-mix(in hsl, var(--panel) 92%, #000 8%); border:1px solid var(--border); border-radius:16px; padding:16px}
+.badge{display:inline-block; padding:4px 8px; border:1px solid color-mix(in hsl, var(--border) 80%, transparent); border-radius:999px; color:var(--muted); font-size:.85rem}
+
+/* Notice */
+.notice{background:color-mix(in hsl, var(--accent2) 18%, transparent); border:1px solid color-mix(in hsl, var(--accent2) 40%, transparent); color:var(--text); padding:10px 12px; border-radius:12px}
+
+/* TOC links */
 .toc a{display:block; padding:6px 10px; border-radius:10px; color:var(--muted); text-decoration:none}
-.toc a:hover{background:#182341; color:var(--text)}
-.audio-note{font-size:.9rem; color:var(--muted)}
-hr{border:0; border-top:1px solid #22325d; margin:24px 0}
-code{background:#0e162a; border:1px solid #22325d; padding:2px 6px; border-radius:6px}
-pre{background:#0e162a; border:1px solid #22325d; padding:12px; border-radius:12px; overflow:auto}
-.quiz{background:#0f1730; border:1px solid #22325d; border-radius:16px; padding:16px}
-.btn{background:#1a2440; border:1px solid #2a3b68; color:#e6eefb; border-radius:12px; padding:10px 14px; cursor:pointer}
-.btn:hover{background:#22325d}
-.notice{background:#0f2a2a; border:1px solid #1a4c4c; color:#bce7e7; padding:10px 12px; border-radius:12px}
+.toc a:hover{background:color-mix(in hsl, var(--panel) 88%, #000 8%); color:var(--text)}
+
+/* Modern citations (chip style) */
+.cite{
+  font-size:.85em; vertical-align:super; text-decoration:none; margin-left:2px; padding:0 6px;
+  border-radius:999px; background:var(--chip); color:var(--chipText); border:1px solid var(--border)
+}
+.cite:hover{box-shadow:0 0 0 2px var(--ring)}
+.cite[data-cite]:hover::after{
+  content:attr(data-cite); position:absolute; transform:translateY(-1.8rem);
+  background:color-mix(in hsl, var(--panel) 92%, #000 6%); border:1px solid var(--border); padding:6px 8px; border-radius:8px; white-space:nowrap;
+  color:var(--text); box-shadow:0 6px 20px rgba(0,0,0,.35)
+}
+/* highlight target in bibliography */
+.ref-highlight{animation:refPulse 1.6s ease 1; box-shadow:0 0 0 2px var(--accent2); border-radius:10px}
+@keyframes refPulse{0%{background:rgba(61,210,195,.18)}100%{background:transparent}}
+
+/* Back link under each bibliography entry */
+.backref{
+  font-size:.85rem;
+  margin-left:6px;
+  color:var(--muted);
+}
+.backref:hover{ color:var(--text); text-decoration:underline; }
+
+/* Accessibility helpers */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Footer */
+footer{border-top:1px solid var(--border); color:var(--muted); padding:24px 0; font-size:.9rem}
+
+/* Small-screen polish */
+@media (max-width:640px){
+  .nav{gap:8px}
+  .card{padding:14px}
+}

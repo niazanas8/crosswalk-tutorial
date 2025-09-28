@@ -11,7 +11,7 @@
 <header>
 <nav class="nav wrapper">
   <a href="../index.html">Home</a>
-  <a href="introduction.html">Introduction</a>
+  <a href="introduction.html" class="active">Introduction</a>
   <a href="challenges.html">Challenges</a>
   <a href="classical.html">Classical Methods</a>
   <a href="deep-learning.html">Deep Learning</a>
@@ -22,6 +22,7 @@
   <a href="bibliography.html">Annotated Bibliography</a>
 </nav>
 </header>
+
 <main class="wrapper">
   <h1>Introduction & Motivation</h1>
   <p class="audio-note">Voice-over placeholder: put your MP3 at <code>assets/audio/introduction.mp3</code> and embed it here.</p>
@@ -29,22 +30,33 @@
   <hr/>
 
   <p>
-  Crosswalks are important because they give pedestrians a safe space to cross the road, but detecting them automatically is not always simple. A reliable detector can improve safety for everyone, especially people who are blind or have low vision, and it also supports autonomous cars and smart city systems. If detection fails, it can create unsafe situations, so researchers have put a lot of focus on solving this problem.
+    Crosswalks are important because they give pedestrians a safe space to cross the road, but detecting them automatically is not always simple. A reliable detector can improve safety for everyone, especially people who are blind or have low vision, and it also supports autonomous cars and smart city systems. If detection fails, it can create unsafe situations, so researchers have put a lot of focus on solving this problem.
   </p>
 
   <p>
-  Earlier systems mainly looked for simple visual cues like parallel lines and repeated stripe patterns, but these methods often fail when crosswalk paint is worn out, cars block the view, or lighting is poor. More recent work uses deep learning models such as object detectors and segmentation networks. Datasets like <em>KITTI</em> and <em>Cityscapes</em> have helped train and test these models. Even newer research looks at <strong>vision-language models (VLMs)</strong>, which combine visual features with language reasoning to move beyond just “finding paint” toward understanding whether it is actually safe to cross <a href="bibliography.html#ref-1">[1]</a><a href="bibliography.html#ref-3">[3]</a><a href="bibliography.html#ref-4">[4]</a>.
+    Earlier systems mainly looked for simple visual cues like parallel lines and repeated stripe patterns, but these methods often fail when crosswalk paint is worn out, cars block the view, or lighting is poor. More recent work uses deep learning models such as object detectors and segmentation networks. Datasets like <em>KITTI</em> and <em>Cityscapes</em> have helped train and test these models. Even newer research looks at <strong>vision-language models (VLMs)</strong>, which combine visual features with language reasoning to move beyond just “finding paint” toward understanding whether it is actually safe to cross
+    <a class="cite" href="bibliography.html#ref-1" data-cite="Romić et al., 2021 — classical periodicity">[1]</a>
+    <a class="cite" href="bibliography.html#ref-3" data-cite="Hwang et al., 2024 — GPT-4V safety reasoning">[3]</a>
+    <a class="cite" href="bibliography.html#ref-4" data-cite="Liu et al., 2023 (CVPR) — VLPD context">[4]</a>.
   </p>
 
   <p>
-  This tutorial reviews different approaches to crosswalk detection, explains their strengths and weaknesses, and points out the open challenges that researchers are still trying to solve.
+    This tutorial reviews different approaches to crosswalk detection, explains their strengths and weaknesses, and points out the open challenges that researchers are still trying to solve.
   </p>
 
   <figure>
-    <img src="../assets/images/crosswalk_placeholder1.png" alt="Illustrative crosswalk example" style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+    <img src="../assets/images/crosswalk_placeholder1.png" alt="Urban street scene containing a marked zebra crosswalk" style="width:100%; border-radius:12px; border:1px solid #1f2a44">
     <figcaption>Example urban scene with a crosswalk (replace with your figure and source attribution).</figcaption>
   </figure>
+
+  <div class="card" style="margin-top:18px">
+    <strong>References on this page:</strong>
+    <a class="cite" href="bibliography.html#ref-1">[1]</a>
+    <a class="cite" href="bibliography.html#ref-3">[3]</a>
+    <a class="cite" href="bibliography.html#ref-4">[4]</a>
+  </div>
 </main>
+
 <footer>
   <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>
 </footer>
