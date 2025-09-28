@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Challenges in Crosswalk Detection • Crosswalk Tutorial</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/nav.js"></script>
+</head>
+<body>
+<header>
+    <nav class="nav wrapper">
+      <a href="index.html">Home</a>
+      <a href="pages/introduction.html">Introduction</a>
+      <a href="pages/challenges.html">Challenges</a>
+      <a href="pages/classical.html">Classical Methods</a>
+      <a href="pages/deep-learning.html">Deep Learning</a>
+      <a href="pages/multimodal.html">VLM / Multimodal</a>
+      <a href="pages/datasets.html">Datasets & Metrics</a>
+      <a href="pages/analysis.html">Comparative Analysis</a>
+      <a href="pages/future.html">Future</a>
+      <a href="pages/bibliography.html">Annotated Bibliography</a>
+    </nav>
+    </header>
+<main class="wrapper">
+  <h1>Challenges in Crosswalk Detection</h1>
+  <p class="audio-note">Voice-over placeholder: put your MP3 at <code>assets/audio/challenges_in_crosswalk_detection.mp3</code> and embed it here.</p>
+  <audio controls src="../assets/audio/challenges_in_crosswalk_detection.mp3"></audio>
+  <hr/>
+
+<div class="grid">
+  <div class="card"><h3>Appearance Variability</h3><p>Different countries and cities use distinct markings (zebra, ladder, continental). Paint wear and resurfacing reduce contrast.</p></div>
+  <div class="card"><h3>Occlusion</h3><p>Vehicles or crowds may partially cover markings, lowering detector confidence and increasing false negatives.</p></div>
+  <div class="card"><h3>Illumination & Weather</h3><p>Harsh shadows, nighttime, glare, rain/snow introduce noise; HDR ranges can saturate. </p></div>
+  <div class="card"><h3>Viewpoint & Scale</h3><p>Onboard cameras view crosswalks at angles and varying distances; perspective distortion changes stripe geometry.</p></div>
+  <div class="card"><h3>Domain Shift</h3><p>Models trained in one city may not generalize to another due to markings, pavement color, or camera intrinsics.</p></div>
+</div>
+
+</main>
+<footer>
+  <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classical Computer Vision Methods • Crosswalk Tutorial</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/nav.js"></script>
+</head>
+<body>
+<header>
+    <nav class="nav wrapper">
+      <a href="index.html">Home</a>
+      <a href="pages/introduction.html">Introduction</a>
+      <a href="pages/challenges.html">Challenges</a>
+      <a href="pages/classical.html">Classical Methods</a>
+      <a href="pages/deep-learning.html">Deep Learning</a>
+      <a href="pages/multimodal.html">VLM / Multimodal</a>
+      <a href="pages/datasets.html">Datasets & Metrics</a>
+      <a href="pages/analysis.html">Comparative Analysis</a>
+      <a href="pages/future.html">Future</a>
+      <a href="pages/bibliography.html">Annotated Bibliography</a>
+    </nav>
+    </header>
+<main class="wrapper">
+  <h1>Classical Computer Vision Methods</h1>
+  <p class="audio-note">Voice-over placeholder: put your MP3 at <code>assets/audio/classical_computer_vision_methods.mp3</code> and embed it here.</p>
+  <audio controls src="../assets/audio/classical_computer_vision_methods.mp3"></audio>
+  <hr/>
+
+<p><strong>Classical computer vision</strong> methods exploit geometric and photometric cues:</p>
+<ul>
+  <li><strong>Edge & Line Detection:</strong> Canny + Hough transforms to find parallel stripes and lane‑like structures.</li>
+  <li><strong>Pattern Templates:</strong> Detect repeated bright/dark bands consistent with zebra markings.</li>
+  <li><strong>Structure Analysis:</strong> Row/column statistics to capture periodicity <a href="bibliography.html#ref-1">[1]</a>.</li>
+</ul>
+<p><em>Pros:</em> fast, interpretable, low compute. <em>Cons:</em> brittle to wear, occlusion, shadows, and non‑standard designs.</p>
+<pre><code>// Pseudocode: simple stripe periodicity idea
+edges = canny(image)
+lines  = hough(edges)
+clusters = find_parallel(lines)
+score = periodic_intensity_along(clusters)
+if score &gt; threshold: report CROSSWALK
+</code></pre>
+
+</main>
+<footer>
+  <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>
+</footer>
+</body>
+</html>

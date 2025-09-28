@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comparative Analysis & Quiz • Crosswalk Tutorial</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/nav.js"></script>
+</head>
+<body>
+<header>
+    <nav class="nav wrapper">
+      <a href="index.html">Home</a>
+      <a href="pages/introduction.html">Introduction</a>
+      <a href="pages/challenges.html">Challenges</a>
+      <a href="pages/classical.html">Classical Methods</a>
+      <a href="pages/deep-learning.html">Deep Learning</a>
+      <a href="pages/multimodal.html">VLM / Multimodal</a>
+      <a href="pages/datasets.html">Datasets & Metrics</a>
+      <a href="pages/analysis.html">Comparative Analysis</a>
+      <a href="pages/future.html">Future</a>
+      <a href="pages/bibliography.html">Annotated Bibliography</a>
+    </nav>
+    </header>
+<main class="wrapper">
+  <h1>Comparative Analysis & Quiz</h1>
+  <p class="audio-note">Voice-over placeholder: put your MP3 at <code>assets/audio/comparative_analysis_&_quiz.mp3</code> and embed it here.</p>
+  <audio controls src="../assets/audio/comparative_analysis_&_quiz.mp3"></audio>
+  <hr/>
+
+<h2>Comparative Analysis</h2>
+<p>This section summarizes <em>reported</em> successes/failures from prior work (not new experiments):</p>
+<ul>
+  <li>Classical methods: excel in good lighting and high‑contrast paint; degrade with wear and shadows <a href="bibliography.html#ref-1">[1]</a>.</li>
+  <li>Deep CNNs: better invariance but require diverse training data; night scenes remain hard <a href="bibliography.html#ref-7">[7]</a>.</li>
+  <li>VLMs: add context and reasoning, promising for safety judgments; risk of latency and explanation reliability <a href="bibliography.html#ref-3">[3]</a><a href="bibliography.html#ref-6">[6]</a>.</li>
+</ul>
+
+<h2>Quick Quiz (5 questions)</h2>
+<div class="quiz">
+  <p><strong>1.</strong> Which factor most degrades classical edge/line detectors?</p>
+  <label><input type="radio" name="q1" value="a"> High compute latency</label><br>
+  <label><input type="radio" name="q1" value="b"> Low contrast & worn paint</label><br>
+  <label><input type="radio" name="q1" value="c"> Excess GPU memory</label><br><br>
+
+  <p><strong>2.</strong> Which metric is standard for segmentation?</p>
+  <label><input type="radio" name="q2" value="a"> BLEU</label><br>
+  <label><input type="radio" name="q2" value="b"> AUC-ROC</label><br>
+  <label><input type="radio" name="q2" value="c"> mIoU</label><br><br>
+
+  <p><strong>3.</strong> VLMs primarily add which capability?</p>
+  <label><input type="radio" name="q3" value="a"> Language‑conditioned reasoning</label><br>
+  <label><input type="radio" name="q3" value="b"> Faster convolutions</label><br>
+  <label><input type="radio" name="q3" value="c"> Better pooling</label><br><br>
+
+  <p><strong>4.</strong> A key deployment metric on embedded devices:</p>
+  <label><input type="radio" name="q4" value="a"> CIDEr</label><br>
+  <label><input type="radio" name="q4" value="b"> FPS / latency</label><br>
+  <label><input type="radio" name="q4" value="c"> Perplexity</label><br><br>
+
+  <p><strong>5.</strong> Which remains an open challenge?</p>
+  <label><input type="radio" name="q5" value="a"> Showing bounding boxes</label><br>
+  <label><input type="radio" name="q5" value="b"> Annotating a single dataset</label><br>
+  <label><input type="radio" name="q5" value="c"> Robust night‑time performance</label><br><br>
+
+  <button class="btn" onclick="gradeQuiz()">Grade Quiz</button>
+  <div id="quiz-result" style="margin-top:10px"></div>
+</div>
+<script src="../assets/js/quiz.js"></script>
+
+</main>
+<footer>
+  <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>
+</footer>
+</body>
+</html>
