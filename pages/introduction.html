@@ -10,31 +10,40 @@
 <body>
 <header>
     <nav class="nav wrapper">
-      <a href="index.html">Home</a>
-      <a href="pages/introduction.html">Introduction</a>
-      <a href="pages/challenges.html">Challenges</a>
-      <a href="pages/classical.html">Classical Methods</a>
-      <a href="pages/deep-learning.html">Deep Learning</a>
-      <a href="pages/multimodal.html">VLM / Multimodal</a>
-      <a href="pages/datasets.html">Datasets & Metrics</a>
-      <a href="pages/analysis.html">Comparative Analysis</a>
-      <a href="pages/future.html">Future</a>
-      <a href="pages/bibliography.html">Annotated Bibliography</a>
+      <a href="../index.html">Home</a>
+      <a href="introduction.html">Introduction</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="classical.html">Classical Methods</a>
+      <a href="deep-learning.html">Deep Learning</a>
+      <a href="multimodal.html">VLM / Multimodal</a>
+      <a href="datasets.html">Datasets & Metrics</a>
+      <a href="analysis.html">Comparative Analysis</a>
+      <a href="future.html">Future</a>
+      <a href="bibliography.html">Annotated Bibliography</a>
     </nav>
-    </header>
+</header>
 <main class="wrapper">
   <h1>Introduction & Motivation</h1>
-  <p class="audio-note">Voice-over placeholder: put your MP3 at <code>assets/audio/introduction_&_motivation.mp3</code> and embed it here.</p>
-  <audio controls src="../assets/audio/introduction_&_motivation.mp3"></audio>
+  <p class="audio-note">Voice-over placeholder: put your MP3 at <code>assets/audio/introduction.mp3</code> and embed it here.</p>
+  <audio controls src="../assets/audio/introduction.mp3"></audio>
   <hr/>
 
-<p>Crosswalks provide safe, designated zones for pedestrians to cross streets, yet automatically detecting them is challenging in practice. A robust detector benefits public safety, supports <em>autonomous driving</em>, and enables <em>assistive navigation</em> for blind or low‑vision users. Detection difficulty arises from <strong>appearance variation</strong> (country‑specific patterns, wear), <strong>occlusion</strong> (vehicles, crowds), and <strong>environmental factors</strong> (shadows, glare, night).</p>
-<p>Historically, systems relied on visual patterns such as parallel stripes and strong edges. Modern approaches use deep networks (e.g., object detection and segmentation) and, more recently, <strong>vision‑language models (VLMs)</strong> that combine visual features with textual reasoning for scene understanding and risk assessment <a href="bibliography.html#ref-3">[3]</a><a href="bibliography.html#ref-4">[4]</a><a href="bibliography.html#ref-5">[5]</a>.</p>
-<figure>
-  <img src="../assets/images/crosswalk_placeholder1.png" alt="Illustrative crosswalk example" style="width:100%; border-radius:12px; border:1px solid #1f2a44">
-  <figcaption>Example urban scene with crosswalk (replace with your figure and source attribution).</figcaption>
-</figure>
+  <p>
+  Crosswalks are important because they give pedestrians a safe space to cross the road, but detecting them automatically is not always simple. A reliable detector can improve safety for everyone, especially people who are blind or have low vision, and it also supports autonomous cars and smart city systems. If detection fails, it can create unsafe situations, so researchers have put a lot of focus on solving this problem.
+  </p>
 
+  <p>
+  Earlier systems mainly looked for simple visual cues like parallel lines and repeated stripe patterns, but these methods often fail when crosswalk paint is worn out, cars block the view, or lighting is poor. More recent work uses deep learning models such as object detectors and segmentation networks. Datasets like <em>KITTI</em> and <em>Cityscapes</em> have helped train and test these models. Even newer research looks at <strong>vision-language models (VLMs)</strong>, which combine visual features with language reasoning to move beyond just “finding paint” toward understanding whether it is actually safe to cross <a href="bibliography.html#ref-1">[1]</a><a href="bibliography.html#ref-3">[3]</a><a href="bibliography.html#ref-4">[4]</a>.
+  </p>
+
+  <p>
+  This tutorial reviews different approaches to crosswalk detection, explains their strengths and weaknesses, and points out the open challenges that researchers are still trying to solve.
+  </p>
+
+  <figure>
+    <img src="../assets/images/crosswalk_placeholder1.png" alt="Illustrative crosswalk example" style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+    <figcaption>Example urban scene with a crosswalk (replace with your figure and source attribution).</figcaption>
+  </figure>
 </main>
 <footer>
   <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>

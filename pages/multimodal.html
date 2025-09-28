@@ -3,38 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VLM / Multimodal Methods • Crosswalk Tutorial</title>
+  <title>VLM / Multimodal • Crosswalk Tutorial</title>
   <link rel="stylesheet" href="../assets/css/styles.css">
   <script defer src="../assets/js/nav.js"></script>
 </head>
 <body>
 <header>
-    <nav class="nav wrapper">
-      <a href="index.html">Home</a>
-      <a href="pages/introduction.html">Introduction</a>
-      <a href="pages/challenges.html">Challenges</a>
-      <a href="pages/classical.html">Classical Methods</a>
-      <a href="pages/deep-learning.html">Deep Learning</a>
-      <a href="pages/multimodal.html">VLM / Multimodal</a>
-      <a href="pages/datasets.html">Datasets & Metrics</a>
-      <a href="pages/analysis.html">Comparative Analysis</a>
-      <a href="pages/future.html">Future</a>
-      <a href="pages/bibliography.html">Annotated Bibliography</a>
-    </nav>
-    </header>
+  <nav class="nav wrapper">
+    <a href="../index.html">Home</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="challenges.html">Challenges</a>
+    <a href="classical.html">Classical Methods</a>
+    <a href="deep-learning.html">Deep Learning</a>
+    <a href="multimodal.html">VLM / Multimodal</a>
+    <a href="datasets.html">Datasets & Metrics</a>
+    <a href="analysis.html">Comparative Analysis</a>
+    <a href="future.html">Future</a>
+    <a href="bibliography.html">Annotated Bibliography</a>
+  </nav>
+</header>
 <main class="wrapper">
-  <h1>VLM / Multimodal Methods</h1>
-  <p class="audio-note">Voice-over placeholder: put your MP3 at <code>assets/audio/vlm_/_multimodal_methods.mp3</code> and embed it here.</p>
-  <audio controls src="../assets/audio/vlm_/_multimodal_methods.mp3"></audio>
+  <h1>Vision-Language & Multimodal Models</h1>
+  <p class="audio-note">Voice later: <code>assets/audio/multimodal.mp3</code></p>
+  <audio controls src="../assets/audio/multimodal.mp3"></audio>
   <hr/>
 
-<p><strong>Vision‑Language Models (VLMs)</strong> and <strong>multimodal LLMs</strong> combine visual perception with textual reasoning. Recent work uses GPT‑4V and related models to assess <em>street‑crossing safety</em> with interpretable rationales <a href="bibliography.html#ref-3">[3]</a>, and to improve context‑aware pedestrian understanding via self‑supervised semantic cues <a href="bibliography.html#ref-4">[4]</a>. Surveys outline broader applications in autonomous driving (perception, planning, data generation) <a href="bibliography.html#ref-5">[5]</a>. Other frameworks jointly describe a scene and localize risks in traffic video <a href="bibliography.html#ref-6">[6]</a>.</p>
-<blockquote>Key idea: move from <em>detecting paint</em> to <em>understanding the scene</em> (is it safe to cross now?).</blockquote>
-<ul>
-  <li>Strengths: contextual reasoning, zero/few‑shot adaptability, language explanations.</li>
-  <li>Challenges: latency, hallucinations, prompt sensitivity, safety guarantees.</li>
-</ul>
+  <p>
+    Newer research looks beyond recognizing paint on the road and tries to <em>understand the whole scene</em>. <strong>Vision-language models (VLMs)</strong> combine visual features with language prompts so they can describe context, explain decisions, and even rate whether it looks safe to cross. For example, a recent study used a large multimodal model (GPT-4V) to predict a street-crossing safety score and give a short explanation for the decision <a href="bibliography.html#ref-3">[3]</a>.
+  </p>
 
+  <p>
+    VLMs can also help traditional perception by providing <em>semantic context</em>. In pedestrian detection, a CVPR’23 method (VLPD) uses vision-language supervision to learn contextual cues (e.g., sidewalks, vehicles) without extra manual labels, improving results under occlusion and crowded scenes <a href="bibliography.html#ref-4">[4]</a>. Surveys of VLMs in autonomous driving summarize broader applications across perception, planning, and decision-making, and also point out open issues like latency, reliability, and domain shift <a href="bibliography.html#ref-5">[5]</a>.
+  </p>
+
+  <div class="grid" style="margin-top:8px">
+    <div class="card">
+      <h3 style="margin-top:0">Why Multimodal?</h3>
+      <ul>
+        <li>Brings <strong>context</strong> (e.g., traffic lights, vehicles, pedestrians) into the decision.</li>
+        <li>Supports <strong>language explanations</strong> that can aid accessibility.</li>
+        <li>Enables <strong>zero/few-shot</strong> adaptation via prompts.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Current Limits</h3>
+      <ul>
+        <li><strong>Latency & compute</strong> for real-time use on edge devices.</li>
+        <li><strong>Hallucinations</strong> or inconsistent reasoning in some cases.</li>
+        <li><strong>Domain shift</strong> (new cities/night scenes) still challenging.</li>
+      </ul>
+    </div>
+  </div>
+
+  <figure style="margin-top:18px">
+    <img src="../assets/images/crosswalk_placeholder2.png" alt="Scene understanding with a multimodal model" style="width:100%; border-radius:12px; border:1px solid #1f2a44">
+    <figcaption>Idea: from detecting stripes to understanding whether conditions are safe to cross (replace with your own figure + citation).</figcaption>
+  </figure>
+
+  <p style="margin-top:18px">
+    Takeaway: multimodal models don’t replace classical or CNN-based detectors; they add <em>contextual reasoning</em> on top. A practical system may combine fast detectors with a VLM that explains or double-checks safety in harder scenes <a href="bibliography.html#ref-3">[3]</a><a href="bibliography.html#ref-5">[5]</a>.
+  </p>
 </main>
 <footer>
   <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>
