@@ -98,7 +98,13 @@ pre{background:color-mix(in hsl, var(--panel) 92%, #000 8%); border:1px solid va
 
 /* Quiz */
 .quiz{background:color-mix(in hsl, var(--panel) 92%, #000 8%); border:1px solid var(--border); border-radius:16px; padding:16px}
-.badge{display:inline-block; padding:4px 8px; border:1px solid color-mix(in hsl, var(--border) 80%, transparent); border-radius:999px; color:var(--muted); font-size:.85rem}
+.quiz p{margin:10px 0 6px; font-weight:600}
+.quiz label{display:inline-block; padding:6px 10px; border-radius:8px; cursor:pointer; margin:2px 0 6px}
+.quiz input[type="radio"]{margin-right:6px}
+.quiz label.correct{background:rgba(46,204,113,.18); outline:1px solid rgba(46,204,113,.6)}
+.quiz label.incorrect{background:rgba(231,76,60,.18); outline:1px solid rgba(231,76,60,.6)}
+.quiz label.quiz-correct-answer{box-shadow:inset 0 0 0 2px rgba(66,197,138,.35)}
+#quiz-result{padding:10px 12px; border-radius:8px; background:#0e1730; border:1px solid #24335a; display:inline-block; margin-top:10px}
 
 /* Notice */
 .notice{background:color-mix(in hsl, var(--accent2) 18%, transparent); border:1px solid color-mix(in hsl, var(--accent2) 40%, transparent); color:var(--text); padding:10px 12px; border-radius:12px}

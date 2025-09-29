@@ -6,6 +6,13 @@
   <title>Comparative Analysis & Quiz • Crosswalk Tutorial</title>
   <link rel="stylesheet" href="../assets/css/styles.css">
   <script defer src="../assets/js/nav.js"></script>
+  <style>
+    /* Optional quiz highlights (kept local to this page) */
+    .quiz label{display:inline-block;padding:2px 4px;border-radius:6px}
+    .quiz-correct{outline:2px solid #42c58a}
+    .quiz-wrong{outline:2px solid #e05260}
+    .quiz-correct-answer{box-shadow:inset 0 0 0 2px rgba(66,197,138,.35)}
+  </style>
 </head>
 <body>
 <header>
@@ -84,12 +91,41 @@
   <hr style="margin:26px 0">
 
   <h2>Quick Quiz (5 Questions)</h2>
-  <div class="quiz">
-    <!-- Quiz content unchanged -->
-    <button class="btn" onclick="gradeQuiz()">Grade Quiz</button>
-    <div id="quiz-result" style="margin-top:10px"></div>
+  <div class="quiz" id="quiz">
+    <!-- Q1 -->
+    <p><strong>1.</strong> Which factor most degrades classical edge/line detectors?</p>
+    <label><input type="radio" name="q1" value="a"> High compute latency</label><br>
+    <label><input type="radio" name="q1" value="b"> Low contrast & worn paint</label><br>
+    <label><input type="radio" name="q1" value="c"> Extra GPU memory</label><br><br>
+
+    <!-- Q2 -->
+    <p><strong>2.</strong> Which metric is standard for segmentation?</p>
+    <label><input type="radio" name="q2" value="a"> BLEU</label><br>
+    <label><input type="radio" name="q2" value="b"> AUC-ROC</label><br>
+    <label><input type="radio" name="q2" value="c"> mIoU</label><br><br>
+
+    <!-- Q3 -->
+    <p><strong>3.</strong> VLMs primarily add which capability?</p>
+    <label><input type="radio" name="q3" value="a"> Language-conditioned reasoning</label><br>
+    <label><input type="radio" name="q3" value="b"> Faster convolutions</label><br>
+    <label><input type="radio" name="q3" value="c"> Better pooling</label><br><br>
+
+    <!-- Q4 -->
+    <p><strong>4.</strong> A key deployment metric on embedded devices:</p>
+    <label><input type="radio" name="q4" value="a"> CIDEr</label><br>
+    <label><input type="radio" name="q4" value="b"> FPS / latency</label><br>
+    <label><input type="radio" name="q4" value="c"> Perplexity</label><br><br>
+
+    <!-- Q5 -->
+    <p><strong>5.</strong> Which remains an open challenge?</p>
+    <label><input type="radio" name="q5" value="a"> Drawing bounding boxes</label><br>
+    <label><input type="radio" name="q5" value="b"> Annotating one small dataset</label><br>
+    <label><input type="radio" name="q5" value="c"> Robust night-time performance</label><br><br>
+
+    <button class="btn" id="grade-btn">Grade Quiz</button>
+    <button class="btn" id="reset-btn" type="button" style="margin-left:8px">Reset</button>
+    <div id="quiz-result" style="margin-top:10px" aria-live="polite"></div>
   </div>
-  <script src="../assets/js/quiz.js"></script>
 
   <div class="card" style="margin-top:18px">
     <strong>References on this page:</strong>
@@ -104,5 +140,66 @@
 <footer>
   <div class="wrapper">Last updated September 28, 2025 • Built for CS661 Project 1 • Author: Anas Niaz</div>
 </footer>
+
+<!-- Inline quiz logic so you don't need another file -->
+<script>
+(() => {
+  const ANSWERS = { q1: "b", q2: "c", q3: "a", q4: "b", q5: "c" };
+
+  function clearHighlights(container){
+    container.querySelectorAll("label").forEach(l=>{
+      l.classList.remove("quiz-correct","quiz-wrong","quiz-correct-answer");
+    });
+  }
+
+  function gradeQuiz(){
+    const box = document.getElementById("quiz");
+    const out = document.getElementById("quiz-result");
+    let score = 0;
+    const total = Object.keys(ANSWERS).length;
+
+    clearHighlights(box);
+
+    for(const q of Object.keys(ANSWERS)){
+      const picked = box.querySelector(`input[name="${q}"]:checked`);
+      const correctVal = ANSWERS[q];
+      const correctInput = box.querySelector(`input[name="${q}"][value="${correctVal}"]`);
+      if (correctInput) correctInput.closest("label").classList.add("quiz-correct-answer");
+
+      if(picked){
+        if(picked.value === correctVal){
+          score++;
+          picked.closest("label").classList.add("quiz-correct");
+        }else{
+          picked.closest("label").classList.add("quiz-wrong");
+        }
+      }
+    }
+    out.textContent = `You scored ${score}/${total}`;
+    out.scrollIntoView({behavior:"smooth", block:"nearest"});
+  }
+
+  function resetQuiz(){
+    const box = document.getElementById("quiz");
+    const out = document.getElementById("quiz-result");
+    box.querySelectorAll('input[type="radio"]').forEach(r=>r.checked=false);
+    clearHighlights(box);
+    out.textContent = "";
+  }
+
+  document.addEventListener("DOMContentLoaded", ()=>{
+    document.getElementById("grade-btn")?.addEventListener("click", gradeQuiz);
+    document.getElementById("reset-btn")?.addEventListener("click", resetQuiz);
+    document.getElementById("quiz")?.addEventListener("change", (e)=>{
+      const input = e.target;
+      if(input?.type === "radio" && input.name){
+        document.querySelectorAll(`input[name="${input.name}"]`).forEach(i=>{
+          i.closest("label").classList.remove("quiz-correct","quiz-wrong");
+        });
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>
