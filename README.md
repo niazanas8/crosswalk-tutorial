@@ -1,6 +1,6 @@
 
 # Crosswalk Detection for Safe Navigation  
-**CS661 – Project 1 Research Tutorial**  
+**CS663 – Project 1 Research Tutorial**  
 Author: *Anas Niaz (Group 4)*  
 Professor: *Lynn Grewe*  
 Date: Fall 2025  
